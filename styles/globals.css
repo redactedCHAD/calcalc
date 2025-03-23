@@ -1,0 +1,129 @@
+/* Tailwind CSS imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Outfit font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 60 12% 96%;  /* #FAFAF8 */
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Navy - Primary */
+    --primary: 210 33% 45%;  /* #4E729A */
+    --primary-foreground: 210 40% 98%;
+
+    /* Mauve - Secondary */
+    --secondary: 315 18% 56%;  /* #A6758C */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Skyblue - Highlight */
+    --highlight: 199 76% 76%;  /* #93D1F0 */
+    --highlight-foreground: 222.2 47.4% 11.2%;
+
+    /* Wine - Accent */
+    --accent: 342 41% 63%;  /* #C57B8D */
+    --accent-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 33% 45%;  /* #4E729A */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 315 18% 56%;  /* #A6758C */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 342 41% 63%;  /* #C57B8D */
+    --accent-foreground: 210 40% 98%;
+
+    --highlight: 199 76% 76%;  /* #93D1F0 */
+    --highlight-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* Base styles */
+body {
+  @apply bg-background text-gray-900;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white p-4 rounded-md shadow-md;
+  }
+  
+  .input {
+    @apply px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Stat card styles based on the image */
+  .stat-card {
+    @apply bg-white rounded-md shadow-sm p-6 relative flex flex-col;
+  }
+
+  .stat-icon {
+    @apply text-4xl mb-2;
+  }
+
+  .stat-label {
+    @apply text-sm text-gray-500 font-medium;
+  }
+
+  .stat-value {
+    @apply text-4xl font-bold mt-auto;
+  }
+
+  .stat-footer {
+    @apply text-xs text-gray-400 mt-2 flex items-center;
+  }
+} 
